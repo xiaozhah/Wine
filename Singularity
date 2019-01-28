@@ -14,7 +14,6 @@ From: ubuntu:18.04
   export LC_ALL=C
 
 %post
-  sed -i 's/archive.ubuntu.com/mirrors.ustc.edu.cn/g' /etc/apt/sources.list
   apt-get update
   apt-get upgrade
   apt-get install -y python-numpy wget zip unzip nano xz-utils g++ gcc bison flex xvfb
