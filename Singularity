@@ -17,7 +17,7 @@ From: ubuntu:18.04
   sed -i 's/archive.ubuntu.com/mirrors.ustc.edu.cn/g' /etc/apt/sources.list
   apt-get update
   apt-get upgrade
-  apt-get install -y python-numpy wget zip unzip nano xz-utils g++ gcc bison flex make
+  apt-get install -y python-numpy wget zip unzip nano xz-utils g++ gcc bison flex xvfb
   apt-get autoclean
   cd /tmp/
   wget https://dl.winehq.org/wine/source/4.0/wine-4.0.tar.xz
