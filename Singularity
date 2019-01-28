@@ -11,7 +11,7 @@ From: ubuntu:18.04
   echo "Haha~ You run the WINE container with vcrun2015..."
 
 %environment
-    export LC_ALL=C
+  export LC_ALL=C
 
 %post
   sed -i 's/archive.ubuntu.com/mirrors.ustc.edu.cn/g' /etc/apt/sources.list
@@ -24,6 +24,7 @@ From: ubuntu:18.04
   tar -xvf wine-4.0.tar.xz && cd wine-4.0
   ./configure --enable-win64 --without-x --without-freetype
   make -j4 && make install
+  ln -s /usr/local/bin/wine64 /usr/local/bin/wine
 
 %help
     This is a WINE container in Ubuntu 18.04
