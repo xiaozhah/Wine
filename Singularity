@@ -3,9 +3,9 @@ From: ubuntu:18.04
  
 %labels
   Author Zhou Xiao
-  Version v1.0.1
+  Version v1.0.2
   wine_Version 4.0
-  build_date 2019 Jan 27
+  build_date 2019 Jan 28
 
 %runscript
   echo "Haha~ You run the WINE container with vcrun2015..."
