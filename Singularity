@@ -16,7 +16,7 @@ From: ubuntu:18.04
 %post
   apt-get update
   apt-get upgrade
-  apt-get install -y python-numpy wget zip unzip nano xz-utils g++ gcc bison flex xvfb make
+  apt-get install -y python-numpy wget zip unzip nano xz-utils g++ gcc bison flex xvfb make cabextract software-properties-common gnupg
   
   
   dpkg --add-architecture i386
