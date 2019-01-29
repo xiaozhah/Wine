@@ -16,7 +16,19 @@ From: ubuntu:18.04
 %post
   apt-get update
   apt-get upgrade
-  apt-get install -y python-numpy wget zip unzip nano xz-utils g++ gcc bison flex xvfb make libpng-dev libpng16-16 
+  apt-get install -y python-numpy wget zip unzip nano xz-utils g++ gcc bison flex xvfb make
+  
+  
+  dpkg --add-architecture i386
+  wget -nc https://dl.winehq.org/wine-builds/winehq.key
+  apt-key add winehq.key
+  apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ bionic main'
+  apt-get update
+  
+  sed -Ei 's/^# deb-src /deb-src /' /etc/apt/sources.list
+  apt-get update
+  apt-get build-dep -y --install-recommends winehq-stable
+
   apt-get autoclean
   cd /tmp
   wget https://dl.winehq.org/wine/source/4.0/wine-4.0.tar.xz
