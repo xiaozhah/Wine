@@ -14,12 +14,13 @@ From: ubuntu:18.04
   export LC_ALL=C
 
 %post
+  dpkg --add-architecture i386
   apt-get update
   apt-get upgrade
   apt-get install -y python-numpy wget zip unzip nano xz-utils g++ gcc bison flex xvfb make cabextract software-properties-common gnupg  
   apt-get install -y g++-multilib ia32-libs gcc-multilib libasound2-dev:i386 libgsm1-dev:i386 libjpeg8-dev:i386 liblcms2-dev:i386 libldap2-dev:i386 libmpg123-dev:i386 libopenal-dev:i386 libv4l-dev:i386 libx11-dev:i386 libxinerama-dev:i386 libxml2-dev:i386 zlib1g-dev:i386
   apt-get install -y libcapi20-dev:i386 libcups2:i386 libdbus-1-3:i386 libfontconfig:i386 libfreetype6:i386 libglu1-mesa:i386 libgnutls26:i386 libgphoto2-2:i386 libncurses5:i386 libosmesa6:i386 libsane:i386 libxcomposite1:i386 libxcursor1:i386 libxi6:i386 libxrandr2:i386 libxslt1.1:i386 ocl-icd-libopencl1:i386 
-  dpkg --add-architecture i386
+  
   wget -nc https://dl.winehq.org/wine-builds/winehq.key
   apt-key add winehq.key
   apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ bionic main'
