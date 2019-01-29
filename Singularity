@@ -12,6 +12,7 @@ From: ubuntu:18.04
 
 %environment
   export LC_ALL=C
+  export WINEDEBUG=fixme-all
 
 %post
   apt-get update
