@@ -17,8 +17,7 @@ From: ubuntu:18.04
   apt-get update
   apt-get upgrade
   apt-get install -y python-numpy wget zip unzip nano xz-utils g++ gcc bison flex xvfb make cabextract software-properties-common gnupg
-  
-  
+ 
   dpkg --add-architecture i386
   wget -nc https://dl.winehq.org/wine-builds/winehq.key
   apt-key add winehq.key
