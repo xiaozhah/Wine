@@ -21,8 +21,15 @@ From: ubuntu:18.04
   cd /tmp
   wget https://dl.winehq.org/wine/source/4.0/wine-4.0.tar.xz
   tar -xvf wine-4.0.tar.xz && cd wine-4.0
-  ./configure --enable-win64 --without-x --without-freetype
-  make -j4 && make install
+  mkdir wine64-build
+  ../configure --enable-win64 --without-x --without-freetype
+  make -j4
+  cd .. && mkdir wine32-build && cd wine32-build
+  ../configur --with-wine64=../wine64-build --without-x --without-freetype
+  make -j4
+  make install
+  cd ../wine64-build
+  make install
   ln -s /usr/local/bin/wine64 /usr/local/bin/wine
 
 %help
