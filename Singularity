@@ -25,7 +25,7 @@ From: ubuntu:18.04
   ../configure --enable-win64 --without-x --without-freetype
   make -j4
   cd .. && mkdir wine32-build && cd wine32-build
-  ../configure --with-wine64=../wine64-build --without-x --without-freetype
+  PKG_CONFIG_PATH=/usr/lib ../configure --with-wine64=../wine64-build --without-x --without-freetype
   make -j4
   make install
   cd ../wine64-build
