@@ -31,7 +31,7 @@ From: ubuntu:18.04
   PKG_CONFIG_PATH=/usr/lib/pkgconfig ../configure --with-wine64=../wine64-build --without-x --without-freetype
   make -j4 && make install
   cd ../wine64-build && make install
-  # Prine Wine Information
+  # Print Wine Information
   file `which wine`
   file `which wine64`
 
