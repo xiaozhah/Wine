@@ -8,7 +8,7 @@ From: ubuntu:18.04
   build_date 2019 Jan 30
 
 %runscript
-  echo "Ha~ You run the Wine container ..."
+  echo "Hello from the Wine container!"
 
 %environment
   export LC_ALL=C
@@ -37,4 +37,4 @@ From: ubuntu:18.04
   file `which wine64`
 
 %help
-    This is a WINE container in Ubuntu 18.04
+    This is a WINE container in Ubuntu 18.04 from Singularity!
