@@ -8,7 +8,7 @@ From: ubuntu:18.04
   build_date 2019 Jan 28
 
 %runscript
-  echo "Haha~ You run the WINE container with vcrun2015..."
+  echo "Ha~ You run the Wine container ..."
 
 %environment
   export LC_ALL=C
