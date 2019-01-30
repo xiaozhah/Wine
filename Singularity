@@ -26,11 +26,11 @@ From: ubuntu:18.04
   tar -xvf wine-4.0.tar.xz && cd wine-4.0
   mkdir wine64-build && cd wine64-build
   ../configure --enable-win64 --without-x --without-freetype
-  make -j4
+  make
   cd ..
   mkdir wine32-build && cd wine32-build
   PKG_CONFIG_PATH=/usr/lib/pkgconfig ../configure --with-wine64=../wine64-build --without-x --without-freetype
-  make -j4 && make install
+  make && make install
   cd ../wine64-build && make install
   # Print Wine Information
   file `which wine`
