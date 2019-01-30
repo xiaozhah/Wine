@@ -3,9 +3,9 @@ From: ubuntu:18.04
  
 %labels
   Author Zhou Xiao
-  Version v1.0.2
+  Version v1.0.3
   wine_Version 4.0
-  build_date 2019 Jan 28
+  build_date 2019 Jan 30
 
 %runscript
   echo "Ha~ You run the Wine container ..."
