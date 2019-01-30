@@ -15,6 +15,7 @@ From: ubuntu:18.04
   export WINEDEBUG=fixme-all
 
 %post
+  dpkg --add-architecture i386
   apt-get update
   apt-get upgrade
   apt-get install -y python-numpy wget zip unzip nano xz-utils g++ g++-multilib gcc bison flex xvfb make cabextract software-properties-common gnupg libpng-dev libpng16-16
