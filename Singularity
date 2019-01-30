@@ -17,7 +17,7 @@ From: ubuntu:18.04
 %post
   apt-get update
   apt-get upgrade
-  apt-get install -y python-numpy wget zip unzip nano xz-utils g++ gcc bison flex xvfb make cabextract software-properties-common gnupg libpng-dev libpng16-16
+  apt-get install -y python-numpy wget zip unzip nano xz-utils g++ g++-multilib gcc bison flex xvfb make cabextract software-properties-common gnupg libpng-dev libpng16-16
   apt-get autoclean
  
   cd /tmp
@@ -25,8 +25,12 @@ From: ubuntu:18.04
   tar -xvf wine-4.0.tar.xz && cd wine-4.0
   mkdir wine64-build && cd wine64-build
   ../configure --enable-win64 --without-x --without-freetype
+  make -j4
+  cd ..
+  mkdir wine32-build && cd wine32-build
+  PKG_CONFIG_PATH=/usr/lib/pkgconfig ../configure --with-wine64=../wine64-build --without-x --without-freetype
   make -j4 && make install
-  ln -s /usr/local/bin/wine64 /usr/local/bin/wine
+  cd ../wine64-build && make install
 
 %help
     This is a WINE container in Ubuntu 18.04
