@@ -1,0 +1,42 @@
+Bootstrap: docker
+From: ubuntu:18.04
+ 
+%labels
+  Author Zhou Xiao
+  Version v1.0.1
+  wine_Version 4.0
+  build_date 2019 Jan 27
+
+%runscript
+  echo "Haha~ You run the WINE container with vcrun2015..."
+
+%environment
+    export LC_ALL=C
+
+%post
+  apt-get update
+  apt-get upgrade
+  dpkg --add-architecture i386 
+  apt-get install -y python-numpy wget zip unzip cabextract xvfb software-properties-common gnupg nano
+  wget -nc https://dl.winehq.org/wine-builds/winehq.key
+  apt-key add winehq.key
+  apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ bionic main'
+  apt-get update
+  apt-get install -y --install-recommends winehq-stable
+  apt-get autoclean
+
+  #============================================
+  # Add User
+  #============================================
+
+  #echo "Creating user ..."
+  #groupadd -g 1421 eeis
+  #useradd -g eeis -u 1462 -ms /bin/bash xiaozh
+  #su xiaozh && cd ~
+  #echo "Hello $(whoami), Now in $(pwd) ..."
+  #wget  https://raw.githubusercontent.com/Winetricks/winetricks/master/src/winetricks
+  #chmod +x winetricks
+  #xvfb-run ./winetricks -q vcrun2015
+
+%help
+    This is a WINE container in Ubuntu 18.04
