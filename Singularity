@@ -16,7 +16,7 @@ From: ubuntu:18.04
 
 %post
   apt-get update
-  apt-get upgrade
+  apt-get upgrade -y
   apt-get install -y python-numpy wget zip unzip nano xz-utils g++ gcc bison flex xvfb make cabextract software-properties-common gnupg libpng-dev libpng16-16
   apt-get autoclean
  
@@ -27,7 +27,7 @@ From: ubuntu:18.04
   ../configure --enable-win64 --without-x --without-freetype
   make && make install
   
-  # Print Wine information
+  # Print wine information
   file `which wine64`
 
 %help
