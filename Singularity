@@ -31,4 +31,4 @@ From: ubuntu:18.04
   file `which wine64`
 
 %help
-    This is a WINE container in Ubuntu 18.04 from Singularity!
+    This is a wine container in Ubuntu 18.04 from Singularity!
