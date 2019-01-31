@@ -26,6 +26,7 @@ From: ubuntu:18.04
   mkdir wine64-build && cd wine64-build
   ../configure --enable-win64 --without-x --without-freetype
   make && make install
+  
   # Print Wine Information
   file `which wine64`
 
