@@ -27,7 +27,7 @@ From: ubuntu:18.04
   ../configure --enable-win64 --without-x --without-freetype
   make && make install
   
-  # Print Wine Information
+  # Print Wine information
   file `which wine64`
 
 %help
