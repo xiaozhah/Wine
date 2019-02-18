@@ -3,7 +3,7 @@ From: ubuntu:18.04
  
 %labels
   Author Zhou Xiao
-  Version v1.0.3
+  Version v1.0.4
   wine_Version 4.0
   build_date 2019 Feb 18
 
