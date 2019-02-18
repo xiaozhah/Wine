@@ -19,8 +19,6 @@ From: ubuntu:18.04
   apt-get upgrade -y
   apt-get install -y python-pip wget zip unzip nano xz-utils g++ gcc bison flex xvfb make cabextract software-properties-common gnupg libpng-dev libpng16-16
   apt-get autoclean
-  
-  pip install numpy
  
   cd /tmp
   wget https://dl.winehq.org/wine/source/4.0/wine-4.0.tar.xz
