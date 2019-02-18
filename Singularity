@@ -5,7 +5,7 @@ From: ubuntu:18.04
   Author Zhou Xiao
   Version v1.0.3
   wine_Version 4.0
-  build_date 2019 Jan 30
+  build_date 2019 Feb 18
 
 %runscript
   echo "Hello from the Wine container!"
