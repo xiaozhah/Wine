@@ -17,7 +17,7 @@ From: ubuntu:18.04
 %post
   apt-get update
   apt-get upgrade -y
-  apt-get install -y python-pip wget zip unzip nano xz-utils g++ gcc bison flex xvfb make cabextract software-properties-common gnupg libpng-dev libpng16-16
+  apt-get install -y python-pip htop wget zip unzip nano xz-utils g++ gcc bison flex xvfb make cabextract software-properties-common gnupg libpng-dev libpng16-16
   apt-get autoclean
  
   cd /tmp
