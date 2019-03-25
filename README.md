@@ -16,7 +16,10 @@
 )
 `./winetricks -q vcrun2015`
 
-## Wine in Singularity-old
+## Wine in Singularity_old_Ubuntu
 可能需要安装
 `xvfb-run ./winetricks -q msxml3 msxml4 msxml6`
 `xvfb-run ./winetricks -q vcrun2015`
+
+## Wine in Singularity_old_Ubuntu
+CentOS的问题，会报错：wine: Unhandled page fault on read access to 0x00000118 at address 0x1400239a2 (thread 0009), starting debugger...，因此这个镜像仅供回顾历程和参考
