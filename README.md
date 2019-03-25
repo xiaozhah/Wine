@@ -18,12 +18,13 @@
 为在Singularity而专门制作的64位的wine(因为Singularity对镜像建立限时两小时完成，而编译的过程很漫长因此只提供了64位版本的编译镜像
 )
 
-## 使用说明
+## 使用说明(一些实际的例子)
 `singularity exec --containall --bind ~/test_wine:/mnt WineSingularity_latest.sif wine /mnt/test_speed/perfectNum.exe`
 
-`bsub -n 4 -q testv3 -oo %J.log singularity exec --containall --bind ~/test_wine:/mnt WineSingularity_latest.sif wine /mnt/test_speed/perfectNum.exe`
+## HPC 命令提交（IBM作业系统）
+`bsub -n 4 -q e3v5 -oo %J.log singularity exec --containall --bind ~/test_wine:/mnt WineSingularity_latest.sif wine /mnt/test_speed/perfectNum.exe`
 
-`bsub -n 4 -q testv3 -oo %J.log singularity exec -H /home-ssd/eeis/xiaozh/homie --pwd /mnt/Yanping13k_IFLYFE/batch --bind ~/300w_lab_hus:/mnt WineSingularity_latest.sif python run.py`
+`bsub -n 4 -q e3v5 -oo %J.log singularity exec -H /home-ssd/eeis/xiaozh/homie --pwd /mnt/Yanping13k_IFLYFE/batch_new --bind /home/eeis/xiaozh/300w_lab_hus:/mnt,/home/eeis/xiaozh/300w_lab:/data,/home-ssd/eeis/xiaozh/audio:/audio ../WineSingularity_latest.sif python run2.py UNIT_SELECTION 69`
 
 ## 不使用的
 ### Wine in Singularity_old_Ubuntu
