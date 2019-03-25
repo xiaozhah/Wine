@@ -19,12 +19,12 @@
 )
 
 ## 使用说明(一些实际的例子)
-`singularity exec --containall --bind ~/test_wine:/mnt WineSingularity_latest.sif wine /mnt/test_speed/perfectNum.exe`
+> singularity exec --containall --bind ~/test_wine:/mnt WineSingularity_latest.sif wine /mnt/test_speed/perfectNum.exe
 
 ## HPC 命令提交（IBM作业系统）
-`bsub -n 4 -q e3v5 -oo %J.log singularity exec --containall --bind ~/test_wine:/mnt WineSingularity_latest.sif wine /mnt/test_speed/perfectNum.exe`
+> bsub -n 4 -q e3v5 -oo %J.log singularity exec --containall --bind ~/test_wine:/mnt WineSingularity_latest.sif wine /mnt/test_speed/perfectNum.exe
 
-`bsub -n 4 -q e3v5 -oo %J.log singularity exec -H /home-ssd/eeis/xiaozh/homie --pwd /mnt/Yanping13k_IFLYFE/batch_new --bind /home/eeis/xiaozh/300w_lab_hus:/mnt,/home/eeis/xiaozh/300w_lab:/data,/home-ssd/eeis/xiaozh/audio:/audio ../WineSingularity_latest.sif python run2.py UNIT_SELECTION 69`
+> bsub -n 4 -q e3v5 -oo %J.log singularity exec -H /home-ssd/eeis/xiaozh/homie --pwd /mnt/Yanping13k_IFLYFE/batch_new --bind /home/eeis/xiaozh/300w_lab_hus:/mnt,/home/eeis/xiaozh/300w_lab:/data,/home-ssd/eeis/xiaozh/audio:/audio ../WineSingularity_latest.sif python run2.py UNIT_SELECTION 69
 
 ## 不使用的
 ### Wine in Singularity_old_Ubuntu
