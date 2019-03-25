@@ -18,8 +18,16 @@
 为在Singularity而专门制作的64位的wine(因为Singularity对镜像建立限时两小时完成，而编译的过程很漫长因此只提供了64位版本的编译镜像
 )
 
-## Wine in Singularity_old_Ubuntu
+## 使用说明
+`singularity exec --containall --bind ~/test_wine:/mnt WineSingularity_latest.sif wine /mnt/test_speed/perfectNum.exe`
+
+`bsub -n 4 -q testv3 -oo %J.log singularity exec --containall --bind ~/test_wine:/mnt WineSingularity_latest.sif wine /mnt/test_speed/perfectNum.exe`
+
+`bsub -n 4 -q testv3 -oo %J.log singularity exec -H /home-ssd/eeis/xiaozh/homie --pwd /mnt/Yanping13k_IFLYFE/batch --bind ~/300w_lab_hus:/mnt WineSingularity_latest.sif python run.py`
+
+## 不使用的
+### Wine in Singularity_old_Ubuntu
 软件包安装，在鲁棒性上不如以上编译安装的
 
-## Wine in Singularity_old_CentOS
+### Wine in Singularity_old_CentOS
 CentOS编译dockerfile正常也可运行简单exe但是容易报内存读错误，仅当做历程
