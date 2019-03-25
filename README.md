@@ -22,4 +22,4 @@
 软件包安装，在鲁棒性上不如以上编译安装的
 
 ## Wine in Singularity_old_CentOS
-CentOS的问题，会报错，仅当做历程
+CentOS编译dockerfile正常也可运行简单exe但是容易报内存读错误，仅当做历程
